@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booleans and if Statement</title>
+  </head>
+  <body style="background-color: #242424">
+    <script>
+      //  let hour1 = new Date().getHours();
+
+      //  console.log(hour1);
+      //  if (hour1 < 12) {
+      //    console.log("Good Morning");
+      //  } else if (hour1 < 18) {
+      //    console.log("Good Afternoon");
+      //  } else {
+      //    console.log("Good Night");
+      //  }
+
+      //  hour = "YOLO";
+      //  console.log(hour1);
+
+      //  let hour2 = new Date().getHours();
+      //  const name = "Abrar";
+
+      //  console.log(hour2);
+      //  if (hour2 < 12) {
+      //    console.log(`Good Morning ${name}`);
+      //  } else if (hour2 < 18) {
+      //    console.log(`Good Afternoon ${name}`);
+      //  } else {
+      //    console.log(`Good Night ${name}`);
+      //  }
+
+      //  const children1 = 6;
+
+      //  if (children1 <= 6) {
+      //    console.log("Children 6 and below will have a Discount");
+      //  } else if (children1 > 6) {
+      //    console.log("Children 7 and above will not have Discount");
+      //  }
+
+      //  const children2 = 6;
+      //  if (children1 <= 6 || children2 > 6) {
+      //    if (children2 <= 6) {
+      //      console.log("Children 6 and below will have a Discount");
+      //    } else {
+      //      console.log("Children 7 and above will not have Discount");
+      //    }
+      //  }
+
+      //  const adults1 = 65;
+
+      //  if (adults1 >= 60) {
+      //    console.log("Adults 60 and above will have a Discount");
+      //  } else {
+      //    console.log("Adults below 60 will not have Discount");
+      //  }
+
+      //  const adults2 = 65;
+      //  if (adults2 >= 60 || adults2 < 60) {
+      //    if (adults2 >= 60) {
+      //      console.log("Adults 60 and above will have a Discount");
+      //    } else {
+      //      console.log("Adults below 60 will not have Discount");
+      //    }
+      //  }
+
+      //  const adults3 = 65;
+      //  const message =
+      //    adults3 >= 60
+      //      ? "Adults 60 and above will have a Discount"
+      //      : "Adults below 60 will not have Discount";
+      //  console.log(message);
+
+      //  const isHoliday = true;
+      //  const children = 6;
+      //  if (children <= 6 || (children > 6 && isHoliday)) {
+      //    if (children <= 6) {
+      //      console.log("Children 6 and below will have a Discount");
+      //    } else {
+      //      console.log("Children 7 and above will have a Discount on holiday");
+      //    }
+      //  } else {
+      //    console.log("Children will not have Discount");
+      //  }
+
+      let num = Math.random();
+      console.log(num);
+      if (num < 0.5) {
+        console.log("Heads");
+      } else {
+        console.log("Tails");
+      }
+      let result = num < 0.5 ? "Heads" : "Tails";
+      console.log(result);
+
+      let guess = "Heads";
+      //  if (guess === result) {
+      //    console.log("You win!");
+      //  } else {
+      //    console.log("You lose!");
+      //  }
+      let result1 = guess === result ? "You Win" : "You Lose";
+      console.log(result1);
+    </script>
+  </body>
+</html>
