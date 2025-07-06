@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="color: aliceblue; background-color: #242424">
+    <button onclick="playGame('heads')">Heads</button>
+    <button onclick="playGame('tails')">tails</button>
+    <p class="result"></p>
+    <p class="score"></p>
+    <script>
+      //  const randomNumber = Math.random();
+      //  const result = randomNumber < 0.5 ? "heads" : "tails";
+
+      //  const guess = "heads";
+      //  console.log(guess === result ? "You win!" : "You lose!");
+
+      let score = { wins: 0, losses: 0 };
+
+      function playGame(guess) {
+        const randomNumber = Math.random();
+        const result = randomNumber < 0.5 ? "heads" : "tails";
+        const outcome = guess === result ? "You win!" : "You lose!";
+        document.querySelector(".result").innerHTML =
+          "You chose ${guess}, the result is ${result}. ${outcome}";
+
+        if (guess === result) {
+          score.wins++;
+        } else {
+          score.losses++;
+        }
+
+        document.querySelector(
+          ".score"
+        ).innerHTML = `Score - Wins: ${score.wins} Losses: ${score.losses}`;
+        console.log(`Score - Wins: ${score.wins}, Losses: ${score.losses}`);
+
+        //console.log(`You chose ${guess}, the result is ${result}.`);
+        //console.log(guess === result ? "You win!" : "You lose!");
+      }
+    </script>
+  </body>
+</html>

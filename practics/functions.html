@@ -108,32 +108,129 @@
       //  console.log(convertLenght(5280, "ft", "miles"));
       //  console.log(convertLenght(3281, "ft", "km"));
       //////////////////////////////////////
-      function convertLength(lenght, from, to) {
-        let validUnits = ["km", "miles", "ft"];
+      //function convertLength(lenght, from, to) {
+      //  let validUnits = ["km", "miles", "ft"];
 
-        if (!validUnits.includes(from) || !validUnits.includes(to)) {
-          let invalidUnit = !validUnits.includes(from) ? from : to;
-          return `Invalid unit: ${invalidUnit}`;
-        }
+      //  if (!validUnits.includes(from) || !validUnits.includes(to)) {
+      //    let invalidUnit = !validUnits.includes(from) ? from : to;
+      //    return `Invalid unit: ${invalidUnit}`;
+      //  }
 
-        if (from === to) {
-          return `${lenght} ${to}`;
-        }
+      //  if (from === to) {
+      //    return `${lenght} ${to}`;
+      //  }
 
-        let conversionRate = {
-          km: { miles: 1 / 1.6, ft: 3281 },
-          miles: { km: 1.6, ft: 5280 },
-          ft: { km: 1 / 3281, miles: 1 / 5280 },
-        };
+      //  let conversionRate = {
+      //    km: { miles: 1 / 1.6, ft: 3281 },
+      //    miles: { km: 1.6, ft: 5280 },
+      //    ft: { km: 1 / 3281, miles: 1 / 5280 },
+      //  };
 
-        let result = length * conversionRate[from][to];
-        return `${result.toFixed(0)} ${to}`;
-      }
+      //  let result = length * conversionRate[from][to];
+      //  return `${result.toFixed(0)} ${to}`;
+      //}
 
-      console.log(convertLength(5, "lbs", "lbs")); // Output: "Invalid unit: lbs"
-      console.log(convertLength(5, "miles", "km")); // Output: "8 km"
-      console.log(convertLength(5, "miles", "ft")); // Output: "26400 ft"
-      console.log(convertLength(5, "km", "ft")); // Output: "16405 ft"
+      //console.log(convertLength(5, "lbs", "lbs")); // Output: "Invalid unit: lbs"
+      //console.log(convertLength(5, "miles", "km")); // Output: "8 km"
+      //console.log(convertLength(5, "miles", "ft")); // Output: "26400 ft"
+      //console.log(convertLength(5, "km", "ft")); // Output: "16405 ft"
+      //let product = {
+      //  name: "basketball",
+      //  price: 2095,
+      //  get priceInDollars() {
+      //    return `$${(this.price / 100).toFixed(2)}`;
+      //  },
+      //};
+      //console.log(product);
+      //console.log(`Price: ${product.priceInDollars}`);
+      /////////////////////////////////////////////////
+      //let product = {
+      //  name: "basketball",
+      //  price: 2095,
+      //};
+      //product.price += 500;
+      //console.log(product);
+      /////////////////////////////////////////////////
+      //let product = {
+      //  name: "basketball",
+      //  price: 2095,
+      //};
+      //product["delivery-time"] = "3 days";
+      //console.log(product);
+      /////////////////////////////////////////////////
+
+      //function comparaPrice(product1, product2) {
+      //  if (product1.price < product2.price) {
+      //    return product1;
+      //  } else if (product2.price < product1.price) {
+      //    return product2;
+      //  } else {
+      //    console.log("Both products have the same price");
+      //    return product1;
+      //  }
+      //}
+
+      //function comparaPrice(product1, product2) {
+      //  return product1.price <= product2.price ? product1 : product2;
+      //}
+
+      //let productA = {
+      //  name: "basketball",
+      //  price: 2595,
+      //};
+
+      //let productB = {
+      //  name: "football",
+      //  price: 1995,
+      //};
+
+      //let lessExpensiveProduct = comparaPrice(productA, productB);
+      //console.log(
+      //  `This less expansive product is: ${lessExpensiveProduct.name} ($${
+      //    lessExpensiveProduct.price / 100
+      //  })`
+      //);
+      /////////////////////////////////////////////////
+
+      //function isSameProduct(product1, product2) {
+      //  //One way
+      //  return (
+      //    product1.name === product2.name && product1.price === product2.price
+      //  );
+      //}
+      //function isSameProduct(product1, product2) {
+      //  //another way
+      //  return JSON.stringify(product1) === JSON.stringify(product2);
+      //}
+
+      //let productA = {
+      //  name: "basketball",
+      //  price: 2595,
+      //};
+      //let productB = {
+      //  name: "basketball",
+      //  price: 2595,
+      //};
+      //let productC = {
+      //  name: "basketball",
+      //  price: 1995,
+      //};
+
+      //console.log(isSameProduct(productA, productB));
+      //console.log(isSameProduct(productA, productC));
+      ////////////////////////////////////////////////
+      //let str = "Good Morning";
+      //let lowerCasesStr = str.toLocaleLowerCase();
+
+      //console.log(lowerCasesStr);
+
+      //let str2 = "test";
+      //let repeatedStr = str2.repeat(2);
+
+      //console.log(repeatedStr);
+      ////////////////////////////////////////////////
+    
+      
     </script>
   </body>
 </html>
