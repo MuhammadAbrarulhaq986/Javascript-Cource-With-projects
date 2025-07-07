@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM (Document Object Model)</title>
+  </head>
+  <body style="color: aliceblue; background-color: #242424">
+    <button>Hello</button>
+    <button class="js-button">Second Button</button>
+    <script>
+      console.log(document.querySelector("button").innerHTML);
+
+      document.querySelector("button").innerHTML = "Changed";
+
+      const buttonElement = document.querySelector(".js-button");
+
+      console.log(buttonElement);
+
+      ////////////////////////////////////////////////
+      /*
+      console.log(document.title);
+      document.title = "changed";
+
+      console.log(document.body);
+      console.log(typeof document.body);
+
+      console.log(document.body.innerHTML);
+      document.body.innerHTML = "Changed";
+      document.body.innerHTML = "<button>GOOD JOB</button>";*/
+
+      //  document.body.innerHTML = "Hello";
+      //  document.title = "GOOD Job";
+      ////////////////////////////////////////////////
+      ////////////////////////////////////////////////
+      //document
+      ////////////////////////////////////////////////
+    </script>
+  </body>
+</html>
