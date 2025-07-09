@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practics</title>
+  </head>
+  <body style="color: aliceblue; background-color: #242424">
+    <!--***********-->
+    <!--<button
+      onclick="console.log('You click Head');
+"
+    >
+      Head
+    </button>
+    <button
+      onclick="console.log('You click Tail');
+"
+    >
+      Tail
+    </button>
+
+    <p>greeting</p>
+    <button onclick="greeting();" class="js-greet">Hello</button>-->
+    <!--***********-->
+    <button onclick="head_tail_game('Head')">Head</button>
+    <button onclick="head_tail_game('Tail');">Tail</button>
+    <p class="js-result"></p>
+    <!--***********-->
+    <!--***********-->
+
+    <input placeholder="Enter your name" class="js-input" /><button
+      onkeydown="nameKeydown(event)"
+      onclick="yourName();"
+    >
+      Submit
+    </button>
+    <p class="js-name"></p>
+    <script>
+      function nameKeydown() {
+        //console.log(event.key);
+        if (event.key === "Enter") {
+          calculateTotal();
+        }
+      }
+      ////////////////////////////////////////////////////////////////
+      function yourName() {
+        let username = document.querySelector(".js-input").value;
+        document.querySelector(
+          ".js-name"
+        ).innerHTML = `Your name is: ${username}`;
+      }
+      ////////////////////////////////////////////////////////////////
+      function head_tail_game(choice) {
+        document.querySelector(
+          ".js-result"
+        ).innerHTML = `You have picked ${choice}`;
+      }
+      ////////////////////////////////////////////////////////////////
+      //  function greeting() {
+      //    const buttonElement = document.querySelector(".js-greet");
+      //    if (buttonElement.innerText === "Hello") {
+      //      buttonElement.innerHTML = "Hi";
+      //    } else {
+      //      buttonElement.innerHTML = "Hello";
+      //    }
+      //  }
+      ////////////////////////////////////////////////////////////////
+    </script>
+  </body>
+</html>

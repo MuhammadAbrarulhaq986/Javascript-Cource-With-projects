@@ -8,7 +8,7 @@
     <button onclick="subscribe();" class="js-subscribe-button">
       Subscribe
     </button>
-
+<!--  -->
     <p>Amazon Shipping Calculator</p>
     <input
       placeholder="Cost of order"
@@ -21,16 +21,14 @@
       Calculate
     </button>
     <p class="js-total-cost"></p>
+<!--  -->
+    <p><b>Write any thing</b></p>
+    <input class="js-write" onkeyup="writing()" />
 
     <script>
-      String(25);
-      console.log("25" - 5);
-      console.log("25" + 5);
-
-      window.document;
-      window.console.log("window");
-      window.alert("window");
-
+      function writing() {
+        let writingEle = document.querySelector(".js-wirte");
+      }
       ////////////////////////////////////////////////
       function handelCostKeydown(event) {
         //console.log(event.key);
@@ -44,15 +42,15 @@
         const inputElement = document.querySelector(".js-cost-input");
 
         let cost = Number(inputElement.value);
-        //console.log(cost);
-        //console.log(typeof cost);
-
         if (cost < 40) {
-          cost = cost + 10;
-          console.log(cost);
+          cost += 10;
+          //  cost = cost + 10;
         }
-        document.querySelector(".js-total-cost").innerHTML = `$${cost}`;
+        document.querySelector(".js-total-cost").innerHTML = `$${cost.toFixed(
+          2
+        )}`;
       }
+
       ////////////////////////////////////////////////
       function subscribe() {
         const buttonElement = document.querySelector(".js-subscribe-button");
