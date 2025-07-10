@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head></head>
-  <body style="background-color: #242424">
+  <body style="color: aliceblue; background-color: #242424">
+    <p class="js-calculater">Calculater Display: 0</p>
+
     <p>
       <button
         onclick="
         updateCalculation('1');
-      "
+        calculaterDisplay()
+    "
       >
         1
       </button>
@@ -14,7 +17,8 @@
       <button
         onclick="
         updateCalculation('2');
-      "
+        calculaterDisplay()
+    "
       >
         2
       </button>
@@ -22,7 +26,8 @@
       <button
         onclick="
         updateCalculation('3');
-      "
+        calculaterDisplay()
+    "
       >
         3
       </button>
@@ -30,7 +35,8 @@
       <button
         onclick="
         updateCalculation(' + ');
-      "
+        calculaterDisplay()
+    "
       >
         +
       </button>
@@ -40,7 +46,8 @@
       <button
         onclick="
         updateCalculation('4');
-      "
+        calculaterDisplay()
+    "
       >
         4
       </button>
@@ -48,7 +55,8 @@
       <button
         onclick="
         updateCalculation('5');
-      "
+        calculaterDisplay()
+    "
       >
         5
       </button>
@@ -56,7 +64,8 @@
       <button
         onclick="
         updateCalculation('6');
-      "
+        calculaterDisplay()
+    "
       >
         6
       </button>
@@ -64,7 +73,8 @@
       <button
         onclick="
         updateCalculation(' - ');
-      "
+        calculaterDisplay()
+    "
       >
         -
       </button>
@@ -74,7 +84,8 @@
       <button
         onclick="
         updateCalculation('7');
-      "
+        calculaterDisplay()
+    "
       >
         7
       </button>
@@ -82,7 +93,8 @@
       <button
         onclick="
         updateCalculation('8');
-      "
+        calculaterDisplay()
+    "
       >
         8
       </button>
@@ -90,7 +102,8 @@
       <button
         onclick="
         updateCalculation('9');
-      "
+        calculaterDisplay()
+    "
       >
         9
       </button>
@@ -98,7 +111,8 @@
       <button
         onclick="
         updateCalculation(' * ');
-      "
+        calculaterDisplay()
+    "
       >
         *
       </button>
@@ -108,7 +122,8 @@
       <button
         onclick="
         updateCalculation('0');
-      "
+        calculaterDisplay()
+    "
       >
         0
       </button>
@@ -116,29 +131,34 @@
       <button
         onclick="
         updateCalculation('.');
-      "
+        calculaterDisplay()
+    "
       >
         .
       </button>
 
       <button
         onclick="
-        // Note: eval() takes a string and runs it as code.
-        // Avoid using eval() in real world projects since
-        // it can potentially be given harmful code to run.
-        // Only use eval() for learning purposes.
-        calculation = eval(calculation);
-        localStorage.setItem('calculation', calculation)
-        console.log(calculation);
-      "
+      // Note: eval() takes a string and runs it as code.
+      // Avoid using eval() in real world projects since
+      // it can potentially be given harmful code to run.
+      // Only use eval() for learning purposes.
+      calculation = eval(calculation);
+      calculaterDisplay()
+      console.log(calculation);
+
+      // Remember to save the calculation here.
+      localStorage.setItem('calculation', calculation);
+    "
       >
         =
       </button>
 
       <button
         onclick="
-        updateCalculation(' / ');
-      "
+      updateCalculation(' / ');
+              calculaterDisplay()
+    "
       >
         /
       </button>
@@ -147,29 +167,38 @@
     <p>
       <button
         onclick="
-        calculation = '';
-        localStorage.setItem('calculation', calculation)
-        console.log(calculation);
-      "
+      calculation = '';
+      console.log(calculation);
+              calculaterDisplay()
+              
+              // Remember to save the calculation here.
+      localStorage.setItem('calculation', calculation);
+  "
       >
         Clear
       </button>
     </p>
 
     <script>
-      //  let calculation = "";
-
-      //  function updateCalculation(value) {
-      //    calculation += value;
-      //    console.log(calculation);
-      //  }
-
       let calculation = localStorage.getItem("calculation") || "";
+      calculaterDisplay();
 
       function updateCalculation(value) {
+        //console.log(calculation);
         calculation += value;
         localStorage.setItem("calculation", calculation);
-        console.log(calculation);
+      }
+      // Optional: you can also create a function in order
+      // to reuse this code.
+      //function saveCalculation() {
+      //  localStorage.setItem("calculation", calculation);
+      //}
+
+      function calculaterDisplay() {
+        document.querySelector(
+          ".js-calculater"
+        ).innerText = `Calculater Display: ${calculation}`;
+        localStorage.setItem("calculation", calculation);
       }
     </script>
   </body>
