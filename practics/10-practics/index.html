@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practics</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h3>Amazon button</h3>
+    <button class="cart-btn">Add to Cart</button>
+    <!--  -->
+    <h3>Uber buttons</h3>
+    <button class="request-btn">Request now</button>
+    <button class="schedule-btn">Schedule for later</button>
+    <!--  -->
+    <h3></h3>
+    <button class="js-button">Test</button>
+    <!--  -->
+    <h3>Press this to go online</h3>
+    <button onclick="gaming();" class="game-btn-js game-btn-css">
+      Gamer go online
+    </button>
+    <!--  -->
+    <h3>Press any of them</h3>
+    <button onclick="games();" class="game-btn-js games-btn-css">Gaming</button>
+    <button onclick="music();" class="music-btn-js music-btn-css">Music</button>
+    <button onclick="tech();" class="tech-btn-js tech-btn-css">Tech</button>
+    <!--/////////////////////////////////////////////////////////////////////////-->
+    <h3>Only one can be active at a time</h3>
+
+    <button onclick="oneAtATime('game');" class="js-game-btn css-game-btn">
+      Gaming
+    </button>
+    <button onclick="oneAtATime('music');" class="js-music-btn css-music-btn">
+      Music
+    </button>
+    <button onclick="oneAtATime('tech');" class="js-tech-btn css-tech-btn">
+      Tech
+    </button>
+    <!--/////////////////////////////////////////////////////////////////////////-->
+    <p>Amazon Shipping Calculator</p>
+    <input
+      placeholder="Enter Cost here"
+      class="js-cost-input css-cost-input"
+      onkeydown="costKeyDown(event)"
+    />
+    <button class="calculate-button" onclick="calculateTotal()">
+      Calculate
+    </button>
+    <p class="js-cost-total"></p>
+    <script src="script.js"></script>
+  </body>
+</html>

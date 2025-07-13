@@ -1,0 +1,191 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  background-color: #232323;
+  color: aliceblue;
+}
+
+h3 {
+  margin: 15px 10px;
+}
+
+.cart-btn {
+  margin: 10px 15px;
+  padding: 10px 35px;
+  background-color: rgb(255, 216, 20);
+  color: black;
+  border: none;
+  border-radius: 40px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.request-btn {
+  margin: 10px 15px;
+  padding: 15px 35px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.schedule-btn {
+  margin: 10px 15px;
+  padding: 15px 35px;
+  background-color: rgb(230, 230, 230);
+  color: black;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.js-button {
+  margin: 10px 15px;
+  padding: 15px 35px;
+  background-color: rgb(230, 230, 230);
+  color: black;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+}
+.game-btn-css {
+  margin: 10px 15px;
+  padding: 15px 35px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.is-offline {
+  color: rgb(230, 230, 230);
+  background-color: red;
+}
+.games-btn-css {
+  margin: 10px 15px;
+  padding: 15px 35px;
+  background-color: yellow;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.is-games {
+  color: rgb(230, 230, 230);
+  background-color: black;
+}
+.music-btn-css {
+  margin: 10px 15px;
+  padding: 15px 35px;
+  background-color: orangered;
+  color: wheat;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.is-music {
+  color: rgb(230, 230, 230);
+  background-color: black;
+}
+
+.tech-btn-css {
+  margin: 10px 15px;
+  padding: 15px 35px;
+  background-color: darkcyan;
+  color: wheat;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.is-music {
+  color: rgb(230, 230, 230);
+  background-color: black;
+}
+/* ///////////////////////////////////////////////////////////////////// */
+
+.js-game-btn,
+.js-music-btn,
+.js-tech-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.js-game-btn {
+  background-color: black;
+  color: #fff;
+}
+
+.js-music-btn {
+  background-color: black;
+  color: #fff;
+}
+
+.js-tech-btn {
+  background-color: black;
+  color: #fff;
+}
+
+.js-game-btn.is-game,
+.js-music-btn.is-music,
+.js-tech-btn.is-tech {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.js-game-btn:hover,
+.js-music-btn:hover,
+.js-tech-btn:hover {
+  opacity: 0.8;
+}
+.active {
+  background-color: green;
+  color: #fff;
+}
+
+.js-cost-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.calculate-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+.calculate-button:hover {
+  background-color: #3e8e41;
+}
+
+.js-cost-total {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
