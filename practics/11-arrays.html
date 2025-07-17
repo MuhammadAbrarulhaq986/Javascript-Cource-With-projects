@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays And Loops Practics</title>
+  </head>
+  <body style="color: aliceblue; background-color: #242424">
+    <script>
+      const myArray = [1, 2, 3, 4, 5];
+      console.log(myArray);
+
+      myArray[0] = 99;
+      console.log(myArray);
+      ///////////////////////////////////////////////2
+      function getLastValue(array) {
+        return array[array.length - 1];
+      }
+      console.log(getLastValue([1, 2, 3, 4, 5]));
+      console.log(getLastValue(["hi", "hello", "good"]));
+
+      ///////////////////////////////////////////////
+
+      //let yArray2 = [1, 20, 22, 24, 5];
+
+      //function arraySwap(array) {
+      //  // Swap first and last elements if array has more than one element
+      //  if (array.length > 1) {
+      //    [array[0], array[array.length - 1]] = [
+      //      array[array.length - 1],
+      //      array[0],
+      //    ];
+      //  }
+      //  return array;
+      //}
+
+      //console.log("Original Array:", yArray2);
+
+      //let swappedArray = arraySwap(yArray2);
+
+      //console.log("Swapped Array:", swappedArray);
+
+      ///////////////////////////////////////////////
+
+      //for (let i = 1; i <= 10; i++) {
+      //  console.log(i);
+      //}
+
+      ///////////////////////////////////////////////
+
+      //for (let j = 5; j >= 0; j--) {
+      //  console.log(j);
+      //}
+
+      /////////////////////////////////////////////////
+
+      //let i = 1;
+      //while (i <= 10) {
+      //  console.log(i, "🎆");
+      //  i++;
+      //}
+      //let j = 5;
+      //while (j >= 0) {
+      //  console.log(j, "🎇");
+      //  j--;
+      //}
+
+      /////////////////////////////////////////////////
+
+      let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+      let incrementedNumbers = [];
+
+      for (let i = 0; i < numbers.length; i++) {
+        incrementedNumbers.push(numbers[i] + 1);
+      }
+      console.log("Original Numbers: 🎆", numbers);
+      console.log("Incremented Numbers: 🎇", incrementedNumbers);
+
+      /////////////////////////////////////////////////
+
+      let myArray1 = [1, 2, 3];
+      let myArray2 = [-2, -1, 0, 99];
+
+      function addOne(array) {
+        let result = [];
+        for (let i = 0; i < array.length; i++) {
+          result.push(array[i] + 1);
+        }
+        return result;
+      }
+
+      console.log("Original Array:*", myArray1);
+      console.log("Added one Array:$", addOne(myArray1));
+
+      console.log("Original Array:*", myArray2);
+      console.log("Added one Array:$", addOne(myArray2));
+
+      /////////////////////////////////////////////////
+    </script>
+  </body>
+</html>
