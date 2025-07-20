@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays And Loops Part 2 Practics</title>
+  </head>
+  <body style="color: aliceblue; background-color: #242424">
+    <h1>Lesson 11 Exerices - Arrays and loops</h1>
+    <script>
+      ///////////////////////////////////////////////
+      // 11o.
+      //const strings = ["hello", "wrold", "search", "good"];
+      //let foundIndex = -1;
+
+      //for (let i = 0; i < strings.length; i++) {
+      //  /// If current item is 'search' and we haven't found it before
+      //  if (strings[i] === "search" && foundIndex === -1) {
+      //    foundIndex = i;
+      //  }
+      //}
+      //console.log(foundIndex);
+
+      ///////////////////////////////////////////////
+      // 11p
+      //const strings = ["hello", "wrold", "search", "good"];
+      //let foundIndex = -1;
+
+      //for (let i = 0; i < strings.length; i++) {
+      //  if (strings[i] === "search") {
+      //    foundIndex = i;
+      //    break;
+      //  }
+      //}
+      //console.log(foundIndex);
+
+      ///////////////////////////////////////////////
+
+      //function findIndex(array, word) {
+      //  let foundIndex = -1;
+
+      //  for (let i = 0; i < array.length; i++) {
+      //    if (array[i] === word) {
+      //      foundIndex = i;
+      //      break; // Stop after finding the first match
+      //    }
+      //  }
+      //  return foundIndex;
+      //}
+      //console.log(findIndex(["green", "red", "blue", "red"], "red")); // → 1
+      //console.log(findIndex(["green", "red", "blue", "red"], "yellow")); // → -1
+
+      ///////////////////////////////////////////////
+      //function removeEgg(foods) {
+      //  const result = [];
+
+      //  for (let i = 0; i < foods.length; i++) {
+      //    if (foods[i] === "egg") {
+      //      continue; // skip 'egg'
+      //    }
+      //    result.push(foods[i]);
+      //  }
+      //  return result;
+      //}
+      //console.log(removeEgg(["egg", "apple", "egg", "egg", "banana"]));
+      //// → ["apple", "banana"]
+
+      ///////////////////////////////////////////////
+      //function removeEgg(foods) {
+      //  const result = [];
+      //  let eggsRemoved = 0; // track how many eggs we've removed
+
+      //  for (let i = 0; i < foods.length; i++) {
+      //    if (foods[i] === "egg" && eggsRemoved < 2) {
+      //      eggsRemoved++; // remove this egg
+      //      continue; // skip adding it
+      //    }
+      //    result.push(foods[i]); // add to result if not removed
+      //  }
+      //  return result;
+      //}
+
+      //console.log(removeEgg(["egg", "apple", "egg", "egg", "banana"]));
+      //// → ["apple", "egg", "banana"]
+      ///////////////////////////////////////////////
+      //function removeEgg(foods) {
+      //  const result = [];
+      //  let eggsRemoved = 0; // count of removed eggs
+      //  // reverse the array to start from the end
+      //  const reversed = foods.slice().reverse();
+
+      //  for (let i = 0; i < reversed.length; i++) {
+      //    if (reversed[i] === "egg" && eggsRemoved < 2) {
+      //      eggsRemoved++; // remove this egg
+      //      continue; // skip adding it
+      //    }
+      //    result.push(reversed[i]); // add to result
+      //  }
+
+      //  // reverse result back to original order
+      //  return result.reverse();
+      //}
+
+      //console.log(removeEgg(["egg", "apple", "egg", "egg", "banana"]));
+      //// → ['egg', 'apple', 'banana']
+      ///////////////////////////////////////////////
+      //function removeEgg(foods) {
+      //  const result = [];
+      //  let eggsRemoved = 0; // count of removed eggs
+
+      //  // reverse the array to start from the end
+      //  const reversed = foods.slice().reverse();
+
+      //  for (let i = 0; i < reversed.length; i++) {
+      //    if (reversed[i] === "egg" && eggsRemoved < 2) {
+      //      eggsRemoved++; // remove this egg
+      //      continue; // skip adding it
+      //    }
+      //    result.push(reversed[i]); // add to result
+      //  }
+
+      //  // reverse result back to original order
+      //  return result.reverse();
+      //}
+
+      //const foods = ["egg", "apple", "egg", "egg", "banana"];
+
+      //console.log(removeEgg(foods)); // → ['egg', 'apple', 'banana']
+
+      //console.log(foods); // → ['egg', 'apple', 'egg', 'egg', 'banana']
+
+      ///////////////////////////////////////////////
+      //for (let i = 0; i < 20; i++) {
+      //  if (i % 3 === 0 && i % 5 === 0) {
+      //    console.log("FizzBuzz🎆");
+      //  } else if (i % 3 === 0) {
+      //    console.log("Fizz🎇");
+      //  } else if (i % 5 === 0) {
+      //    console.log("Buzz✨");
+      //  } else {
+      //    console.log("🎃", i);
+      //  }
+      //}
+
+      ///////////////////////////////////////////////
+    </script>
+  </body>
+</html>
