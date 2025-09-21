@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Functions</title>
+  </head>
+  <style>
+    /* Style for the message */
+    #message {
+      opacity: 1;
+      transition: opacity 0.5s ease; /* Smooth fade in/out */
+    }
+
+    /* Hidden state (will fade out) */
+    #message.hidden {
+      opacity: 0;
+    }
+  </style>
+  <body style="color: aliceblue; background-color: #242424">
+    <h1>Advanced Functions Practics questions</h1>
+
+    <button
+      id="myBtn"
+      style="
+        color: white;
+        background-color: black;
+        width: 150px;
+        height: 100px;
+        font-size: 20px;
+      "
+    >
+      Click Me
+    </button>
+
+    <button
+      id="cartButton"
+      style="
+        color: white;
+        background-color: maroon;
+        width: 150px;
+        height: 100px;
+        font-size: 20px;
+      "
+    >
+      Add to Cart
+    </button>
+    <p id="message"></p>
+    <script>
+      /////////////////////////////////////////
+      //let add = function () {
+      //  console.log(2 + 3);
+      //};
+      //add();
+      //add();
+      ///////////////////////////////////////////////
+      //let add = function () {
+      //  console.log(2 + 3);
+      //};
+
+      //function runTwice(fun) {
+      //  fun();
+      //  fun();
+      //}
+
+      //runTwice(function () {
+      //  console.log("12b");
+      //});
+
+      //runTwice(add);
+      /////////////////////////////////////////////////
+      //  Select the button from the DOM
+      //let button = document.getElementById("myBtn");
+
+      ////  Add a click event listener
+      //button.addEventListener("click", function () {
+      //  // Use setTimeout to delay the change
+      //  setTimeout(function () {
+      //    button.textContent = "Finished"; // Change button text after 1 sec
+      //  }, 1000); // 1000ms = 1 second
+      //});
+
+      ///////////////////////////////////////////////
+      let button = document.getElementById("myBtn");
+
+      //  Add a click event listener
+      button.addEventListener("click", function () {
+        // Use setTimeout to delay the change
+        setTimeout(function () {
+          button.textContent = "Loading..."; // Change button text after 1 sec
+
+          setTimeout(function () {
+            button.textContent = "Finished"; // Change button text after 1 sec
+          }, 2000);
+        }, 1000); // 1000ms = 1 second
+      });
+      ///////////////////////////////////////////////
+      //let cartButton = document.getElementById("cartButton");
+      //let message = document.getElementById("message");
+
+      //cartButton.addEventListener("click", function () {
+      //  message.textContent = "✅ Added";
+
+      //  setTimeout(function () {
+      //    message.textContent = "";
+      //  }, 2000);
+      //});
+      ///////////////////////////////////////////////
+      let cartButton = document.getElementById("cartButton");
+      let message = document.getElementById("message");
+      // Store the timeout ID so we can cancel it
+      let timeoutId = null;
+
+      cartButton.addEventListener("click", function () {
+        //Show the message
+        message.textContent = "✅ Added";
+        message.classList.remove("hidden");
+
+        // If there is already a timer running, clear it
+        if (timeoutId) {
+          clearTimeout(timeoutId);
+        }
+
+        // Start new timer
+        timeoutId = setTimeout(function () {
+          // Add the fade-out class
+          message.classList.add("hidden");
+
+          // Wait for the fade-out animation (0.5s) before removing text
+          setTimeout(() => {
+            message.textContent = "";
+            timeoutId = null;
+          }, 500); // 500ms matches CSS transition time
+        }, 2000);
+      });
+    </script>
+  </body>
+</html>
