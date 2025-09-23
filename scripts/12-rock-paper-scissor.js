@@ -10,9 +10,15 @@ updateScoreElement();
 let isAutoPlaying = false;
 let intervalId;
 
+const autoPlay = () =>{
+
+};
+
+//* Note: When we create a normal function we can use Hoisting
+//* Means we can call the function before creating it 
 function autoPlay() {
     if (!isAutoPlaying) {
-        intervalId = setInterval(function () {
+        intervalId = setInterval(() => {
             const playerMove = pickComputerMove();
             playGame(playerMove);
         }, 1000);
