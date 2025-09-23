@@ -4,6 +4,24 @@
     <title>Advanced Functions</title>
   </head>
   <style>
+    body {
+      color: aliceblue;
+      background-color: #242424;
+    }
+    #myBtn {
+      color: white;
+      background-color: black;
+      width: 150px;
+      height: 100px;
+      font-size: 20px;
+    }
+    #cartButton {
+      color: white;
+      background-color: maroon;
+      width: 150px;
+      height: 100px;
+      font-size: 20px;
+    }
     /* Style for the message */
     #message {
       opacity: 1;
@@ -14,36 +32,58 @@
     #message.hidden {
       opacity: 0;
     }
+    #notifyBtn {
+      background-color: #4caf50;
+      color: white;
+    }
+    #notifyBtn:hover {
+      background-color: #45a049;
+      transform: scale(1.05);
+    }
+
+    /* Stop Notification button */
+    #stopBtn {
+      background-color: #f44336;
+      color: white;
+    }
+    #stopBtn:hover {
+      background-color: #d32f2f;
+      transform: scale(1.05);
+    }
+
+    #addBtn {
+      background: #00b506;
+      color: whitesmoke;
+    }
+    #addBtn:hover {
+      background: #00ff0d;
+    }
+
+    #removeBtn {
+      background: #af0c00;
+      color: whitesmoke;
+    }
+    #removeBtn:hover {
+      background: #d32f2f;
+    }
   </style>
-  <body style="color: aliceblue; background-color: #242424">
+  <body>
     <h1>Advanced Functions Practics questions</h1>
 
-    <button
-      id="myBtn"
-      style="
-        color: white;
-        background-color: black;
-        width: 150px;
-        height: 100px;
-        font-size: 20px;
-      "
-    >
-      Click Me
-    </button>
+    <button id="myBtn">Click Me</button>
 
-    <button
-      id="cartButton"
-      style="
-        color: white;
-        background-color: maroon;
-        width: 150px;
-        height: 100px;
-        font-size: 20px;
-      "
-    >
-      Add to Cart
-    </button>
+    <button id="cartButton">Add to Cart</button>
     <p id="message"></p>
+
+    <!--* 12g. *-->
+    <h1>Welcome to my Messaging App</h1>
+    <button id="notifyBtn">Simulate New Message</button>
+    <button id="stopBtn">Stop Notification</button>
+    <!--* 12h. *-->
+    <h1>📩 Messaging App</h1>
+    <button id="addBtn">+ Add Message</button>
+    <button id="removeBtn">- Remove Message</button>
+
     <script>
       /////////////////////////////////////////
       //let add = function () {
@@ -104,33 +144,175 @@
       //  }, 2000);
       //});
       ///////////////////////////////////////////////
-      let cartButton = document.getElementById("cartButton");
-      let message = document.getElementById("message");
-      // Store the timeout ID so we can cancel it
-      let timeoutId = null;
+      //let cartButton = document.getElementById("cartButton");
+      //let message = document.getElementById("message");
+      //// Store the timeout ID so we can cancel it
+      //let timeoutId = null;
 
-      cartButton.addEventListener("click", function () {
-        //Show the message
-        message.textContent = "✅ Added";
-        message.classList.remove("hidden");
+      //cartButton.addEventListener("click", function () {
+      //  //Show the message
+      //  message.textContent = "✅ Added";
+      //  message.classList.remove("hidden");
 
-        // If there is already a timer running, clear it
-        if (timeoutId) {
-          clearTimeout(timeoutId);
+      //  // If there is already a timer running, clear it
+      //  if (timeoutId) {
+      //    clearTimeout(timeoutId);
+      //  }
+
+      //  // Start new timer
+      //  timeoutId = setTimeout(function () {
+      //    // Add the fade-out class
+      //    message.classList.add("hidden");
+
+      //    // Wait for the fade-out animation (0.5s) before removing text
+      //    setTimeout(() => {
+      //      message.textContent = "";
+      //      timeoutId = null;
+      //    }, 500); // 500ms matches CSS transition time
+      //  }, 2000);
+      //});
+      ///////////////////////////////////////////////
+      //let intervalId = null;
+      //let showingNewMessage = false;
+
+      //// When we click "Simulate New Message"
+      //document.getElementById("notifyBtn").addEventListener("click", () => {
+      //  // IF already running, dont't start again
+      //  if (intervalId) return;
+
+      //  intervalId = setInterval(() => {
+      //    if (showingNewMessage) {
+      //      document.title = "📩 New Message!";
+      //      console.log(intervalId);
+      //    } else {
+      //      document.title = "💬 Messaging App";
+      //      console.log(intervalId);
+      //    }
+      //    showingNewMessage = !showingNewMessage; // toggle between states
+      //  }, 1000); // every 1 sec
+      //});
+
+      //document.getElementById("stopBtn").addEventListener("click", () => {
+      //  clearInterval(intervalId);
+      //  intervalId = null;
+      //  document.title = "💬 Messaging App"; // reset to default
+      //  console.log(intervalId);
+      //});
+      /////////////////////////////////////////////////////
+      //// Keep track of how many unread messages we have
+      //let messages = 2; // start with 2 messages
+
+      //// This function updates the browser tab title based on the message count
+      //function updateTitle() {
+      //  if (messages > 0) {
+      //    // If there are messages, show "📩 X New Message(s)"
+      //    // Use ternary operator ( ? : ) to add "s" if there is more than 1 message
+      //    document.title = `📩 ${messages} New Message${
+      //      messages > 1 ? "s" : ""
+      //    }`;
+      //  } else {
+      //    // If there are 0 messages, just show the app name
+      //    document.title = "💬 Messaging App";
+      //  }
+      //}
+
+      //// ======================
+      //// Add Button Functionality
+      //// ======================
+
+      //// When the "Add" button is clicked...
+      //document.getElementById("addBtn").addEventListener("click", () => {
+      //  // Increase message count by 1
+      //  messages++;
+      //  // Update the title with the new count
+      //  updateTitle();
+      //});
+
+      //// ======================
+      //// Remove Button Functionality
+      //// ======================
+
+      //// When the "Remove" button is clicked...
+      //document.getElementById("removeBtn").addEventListener("click", () => {
+      //  // Only decrease if messages are greater than 0
+      //  if (messages > 0) {
+      //    messages--;
+      //  }
+      //  // Update the title with the new count
+      //  updateTitle();
+      //});
+
+      //// ======================
+      //// Initial Setup
+      //// ======================
+
+      //// Run once when the page loads to set the correct title
+      //updateTitle();
+      /////////////////////////////////////////////////////
+
+      let messages = 2; // Start with 2 messages
+      let intervalId = null; // Will store the interval so we can stop it later
+      let showingAppTitle = false; // To toggle between message/app title
+
+      // Function to start blinking the title
+      function startBlinking() {
+        if (intervalId) return; // If already blinking, don't start again
+
+        intervalId = setInterval(() => {
+          if (messages > 0) {
+            // Toggle between showing app name and showing message count
+            if (showingAppTitle) {
+              document.title = "💬 Messaging App";
+            } else {
+              document.title = `📩 ${messages} New Message${
+                messages > 1 ? "s" : ""
+              }`;
+            }
+            showingAppTitle = !showingAppTitle; // Flip the state
+          }
+        }, 1000); // Switch every 1 second
+      }
+
+      // Function to stop  blinking and reset title
+      function stopBlinking() {
+        clearInterval(intervalId);
+        intervalId = null;
+        document.title = "💬 Messaging App"; // Always reset to app name
+      }
+      // ======================
+      // Add Button
+      // ======================
+      document.getElementById("addBtn").addEventListener("click", () => {
+        messages++;
+        if (messages > 0 && !intervalId) {
+          // Restart blinking if we have messages
+          startBlinking();
+        }
+      });
+
+      // ======================
+      // Remove Button
+      // ======================
+      document.getElementById("removeBtn").addEventListener("click", () => {
+        if (messages > 0) {
+          messages--;
         }
 
-        // Start new timer
-        timeoutId = setTimeout(function () {
-          // Add the fade-out class
-          message.classList.add("hidden");
-
-          // Wait for the fade-out animation (0.5s) before removing text
-          setTimeout(() => {
-            message.textContent = "";
-            timeoutId = null;
-          }, 500); // 500ms matches CSS transition time
-        }, 2000);
+        if (messages === 0) {
+          // If no more messages, stop blinking
+          stopBlinking();
+        }
       });
+
+      // ======================
+      // Initial Setup
+      // ======================
+      if (messages > 0) {
+        startBlinking();
+      } else {
+        stopBlinking();
+      }
+      ///////////////////////////////////////////////////
     </script>
   </body>
 </html>
