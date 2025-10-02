@@ -5,58 +5,76 @@
   </head>
   <body style="color: aliceblue; background-color: #242424">
     <h1>Advanced Functions</h1>
+    <button onclick="" class="js-button">Click</button>
     <script>
       /*
-      /////////////////////////////////////////
-       greeting(); // Hoisting
-       function greeting() {
-         // We can only use Hoistingin these type of Functions
-         console.log("Hello");
-       }
-       //greeting(); // Calling a function
-       ///////////////////////////////////////////////
-       const num = 2;
-       //const function1 = function greeting() {
-       //  console.log("Hello2");
-       //}; Function with a Name
-       const function1 = function () {
-         console.log("Hello2");
-       }; // Function without a Name is Anonymous Function
+      const buttonElement = document.querySelector(".js-button");
 
-       console.log(function1);
-       console.log(typeof function1);
-       function1();
+      const eventListener = () => {
+        console.log("Click");
+      };
 
-       ///////////////////////////////////////////////
-       const object1 = {
-         num: 2,
-         //fun: function greeting() {
-         //  //Method
-         //  console.log("Hello3");
-         //},
-         fun: function () {
-           //Method
-           console.log("Hello3");
-         },
-       };
-       object1.fun();
-       //////////////////////////////////////////////
+      buttonElement.addEventListener("click", eventListener);
 
-       function display(param) {
-         console.log(param);
-       }
-       display(2);
+      buttonElement.removeEventListener("click", eventListener);
 
-       ///////////////////////////////////////////////
-       // Passing a function into another function
-       function run(param) {
-         param();
-       }
-       run(function () {
-         // CallBack Function
-         console.log("Hello4");
-       });
-       */
+      buttonElement.addEventListener("click", () => {
+        console.log("Click to");
+      });
+      */
+      ///////////////////////////////////////////////
+
+      /*
+            /////////////////////////////////////////
+             greeting(); // Hoisting
+             function greeting() {
+               // We can only use Hoistingin these type of Functions
+               console.log("Hello");
+             }
+             //greeting(); // Calling a function
+             ///////////////////////////////////////////////
+             const num = 2;
+             //const function1 = function greeting() {
+             //  console.log("Hello2");
+             //}; Function with a Name
+             const function1 = function () {
+               console.log("Hello2");
+             }; // Function without a Name is Anonymous Function
+
+             console.log(function1);
+             console.log(typeof function1);
+             function1();
+
+             ///////////////////////////////////////////////
+             const object1 = {
+               num: 2,
+               //fun: function greeting() {
+               //  //Method
+               //  console.log("Hello3");
+               //},
+               fun: function () {
+                 //Method
+                 console.log("Hello3");
+               },
+             };
+             object1.fun();
+             //////////////////////////////////////////////
+
+             function display(param) {
+               console.log(param);
+             }
+             display(2);
+
+             ///////////////////////////////////////////////
+             // Passing a function into another function
+             function run(param) {
+               param();
+             }
+             run(function () {
+               // CallBack Function
+               console.log("Hello4");
+             });
+             */
       ///////////////////////////////////////////////
       //setTimeout(function () {
       //  console.log("TimeOut");
@@ -71,54 +89,66 @@
 
       //console.log("Next Line 2");
       ///////////////////////////////////////////////
+      /*
 
-      ["Make dinner", "Wash Dishes", "Watch Youtube"].forEach(function (
-        value,
-        index
-      ) {
-        if (value === "Wash Dishes") {
-          return;
-        }
+            ["Make dinner", "Wash Dishes", "Watch Youtube"].forEach(function (
+              value,
+              index
+            ) {
+              if (value === "Wash Dishes") {
+                return;
+              }
 
-        console.log(index);
-        console.log(value);
-      });
+              console.log(index);
+              console.log(value);
+            });
+            ///////////////////////////////////////////////
+
+            const regularFunction = function (param, param2) {
+              console.log("Hello1");
+              return 5;
+            };
+            regularFunction();
+
+            const arrowFunction = (param, param2) => {
+              console.log("Hello2");
+              return 5;
+            };
+            arrowFunction();
+            ///////////////////////////////////////////////
+
+            const oneParam = (param) => {
+              // when there is one param we can remove the baracket of param
+              //like this:  const oneParam = param => {...}
+              console.log(param + 1);
+            };
+            oneParam(2);
+            ///////////////////////////////////////////////
+
+            const oneLine = () => 2 + 3; // One line arrow function
+            console.log(oneLine());
+            ///////////////////////////////////////////////
+            ["Make dinner", "Wash Dishes", "Watch Youtube"].forEach(
+              (value, index) => {
+                if (value === "Wash Dishes") {
+                  return;
+                }
+                console.log(index);
+                console.log(value);
+              }
+            );
+            //// Calling a function in an object ///////////////////////////////////////////
+      const object2 = {
+        method: () =>{
+
+        },
+        // This is called a shortHand method  syntax
+        method() {}
+      }
+      */
       ///////////////////////////////////////////////
-
-      const regularFunction = function (param, param2) {
-        console.log("Hello1");
-        return 5;
-      };
-      regularFunction();
-
-      const arrowFunction = (param, param2) => {
-        console.log("Hello2");
-        return 5;
-      };
-      arrowFunction();
+      
       ///////////////////////////////////////////////
-
-      const oneParam = (param) => {
-        // when there is one param we can remove the baracket of param
-        //like this:  const oneParam = param => {...}
-        console.log(param + 1);
-      };
-      oneParam(2);
-      ///////////////////////////////////////////////
-
-      const oneLine = () => 2 + 3; // One line arrow function
-      console.log(oneLine());
-      ///////////////////////////////////////////////
-
-      ["Make dinner", "Wash Dishes", "Watch Youtube"].forEach(
-        (value, index) => {
-          if (value === "Wash Dishes") {
-            return;
-          }
-          console.log(index);
-          console.log(value);
-        }
-      );
     </script>
   </body>
 </html>
